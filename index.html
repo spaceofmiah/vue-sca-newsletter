@@ -4,11 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <link rel="stylesheet" href="base.css">
     <title>Vue Newsletter</title>
 </head>
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <h2>Benefitting Over 100,000 subscribers</h2>
+        <p>Subscribe to Newsletter</p>
+        <form v-on:submit="subscribe" method="post">
+            <input  v-model="email" autocomplete="off" type="email" name="email" id="id_email" placeholder="Enter your email address">
+            <button class="btn">Subscribe</button>
+        </form>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>
